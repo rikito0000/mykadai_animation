@@ -1,10 +1,34 @@
 footer.siteFooter
-    .inner__cont
+    .siteFooter__innerCont
+        .siteFooter__leftCont
+            address.siteFooter__address 〒151-0064<br>東京都渋谷区上原1-22-3
+        .siteFooter__rightCont
+            ul.siteFooter__navList
+                li.siteFooter__navItem
+                    a.siteFooter__navItemLink(href="#") 会社情報
+                li.siteFooter__navItem
+                    a.siteFooter__navItemLink(href="#") 企業ポリシー
+                li.siteFooter__navItem
+                    a.siteFooter__navItemLink(href="#") サービス
+                li.siteFooter__navItem
+                    a.siteFooter__navItemLink(href="#") 採用情報
+            .siteFooter__polity
+                a.siteFooter__polityLeftLink(href="#")
+                    img.siteFooter__isoImg(src=`${relativePath}/_assets/images/footerSec/footerSec_img01.jpg`, alt="is,iso")
+                a.siteFooter__polityRightLink(href="#")
+                    img.siteFooter__privacyImg(src=`${relativePath}/_assets/images/footerSec/footerSec_img02.jpg`, alt="たいせつにします。プライバシー")
+                a.siteFooter__polityText(href="#") プライバシーポリシー
+            a.siteFooter__facebookLink(href="#")
+                img.siteFooter__facebookLogo(src=`${relativePath}/_assets/images/footerSec/footerSec_facebookLogo.png`, alt="facebook")
+            a.siteFooter__twitterLink(href="#")
+                img.siteFooter_twitterLogo(src=`${relativePath}/_assets/images/footerSec/footerSec_twitterLogo.png`, alt="twitter")
+
+
 
         //- back to top
-        .toTop.js-toTop
+    .toTop.js-toTop
 
-        p.copyrights &copy; website.com | 2020
+    p.siteFooter__copyrights Copyrights &copy; 2017 Corporation. All Rights Reserved.
 
 |
 |

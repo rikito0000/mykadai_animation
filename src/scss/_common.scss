@@ -108,3 +108,11 @@ main
     padding-top: $headerHeightSP;
   }
 }
+
+.bgWhite {
+  display: inline-block;
+  background-color: $white;
+  padding: 0 1rem;
+  margin-bottom: 0.9rem;
+}
+

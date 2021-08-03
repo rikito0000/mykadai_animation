@@ -1,8 +1,19 @@
-@mixin u-articleText($color: $white) {
+@mixin u-articleText(
+  $color: $white,
+  $fz: 1.4rem,
+  $ls: 0.05em,
+  $lh: 1.2,
+  $ff: "barlow",
+  $fw: 400
+  )
+
+  {
   color: $color;
-  font-size: 15px;
-  letter-spacing: 0.05em;
-  line-height: 1.8;
+  font-size: $fz;
+  letter-spacing: $ls;
+  line-height: $lh;
+  font-family: $ff;
+  font-weight: $fw;
 
   // Liquid
   @include u-mqMax() {
@@ -11,6 +22,5 @@
 
   // SP
   @include u-mqMax($maxW: $windowSP) {
-    font-size: 12px;
   }
 }

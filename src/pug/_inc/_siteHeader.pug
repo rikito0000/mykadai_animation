@@ -9,7 +9,11 @@
 
 header.siteHeader
     .siteHeader__inner
-        nav.siteHeader__nav(role='navigator')
-            ul.siteHeader__navList: each item in main_menu
-                li.siteHeader__navItem(class=(item.slug==currentPage ? "is-current" : ''))
-                    a.siteHeader__navItemLink(href=`${relativePath}/`+`${item.link}`)= item.title
+        .siteHeader__hamburger#hamburger
+            span.siteHeader__hamburgerLine
+            span.siteHeader__hamburgerLine
+            span.siteHeader__hamburgerLine
+        //- nav.siteHeader__nav(role='navigator')
+        //-     ul.siteHeader__navList: each item in main_menu
+        //-         li.siteHeader__navItem(class=(item.slug==currentPage ? "is-current" : ''))
+        //-             a.siteHeader__navItemLink(href=`${relativePath}/`+`${item.link}`)= item.title

@@ -62,12 +62,12 @@ h3,
 h4,
 h5,
 h6 {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0;
   margin-top: 0;
 }
 
 p {
-  margin-bottom: 1rem;
+  margin-bottom: 0;
   margin-top: 0;
 }
 
@@ -85,14 +85,20 @@ abbr[data-original-title] {
 address {
   font-style: normal;
   line-height: inherit;
-  margin-bottom: 1rem;
+  margin-bottom: 0;
+}
+
+li {
+  list-style: none;
+  text-decoration: none;
 }
 
 ol,
 ul,
 dl {
-  margin-bottom: 1rem;
+  margin-bottom: 0;
   margin-top: 0;
+  padding: 0;
 }
 
 ol ol,
@@ -107,7 +113,7 @@ dt {
 }
 
 dd {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0;
   margin-left: 0;
 }
 
@@ -149,7 +155,7 @@ a {
 
 a:hover {
   color: #0056b3;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 a:not([href]):not([class]) {
@@ -178,12 +184,13 @@ pre {
 }
 
 figure {
-  margin: 0 0 1rem;
+  margin: 0 0;
 }
 
 img {
   border-style: none;
   vertical-align: middle;
+  width: 100%;
 }
 
 svg {

@@ -2,8 +2,6 @@
 siteHeader
 ====================================================================*/
 .siteHeader {
-  background: tomato;
-  box-shadow: 1px 1px 6px 4px rgba($black, 0.04);
   height: $headerHeightPC;
   left: 0;
   padding: 20px 0;
@@ -19,5 +17,31 @@ siteHeader
   &__innerArea {
     @include u-contentCenter($widthPC: $contentCenter, $paddingLR-PC: 15px, $paddingLR-SP: 15px);
     @include u-flex($jc: space-between, $ai: center);
+  }
+
+  &__hamburger {
+    width: 5em;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    z-index: 200;
+  }
+
+  &__hamburgerLine {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 54%;
+    height: 3px;
+    background-color: $black;
+    border-radius: 3px;
+    transition: 0.5s 0.25s;
+    z-index: 1000;
+    &:nth-child(1) {
+      transform: translateY(9px);
+    }
+    &:nth-child(3) {
+      transform: translateY(-9px)
+    }
   }
 }

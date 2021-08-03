@@ -3,5 +3,130 @@ siteFooter
 ====================================================================*/
 .siteFooter {
   background-color: $darkGray;
-  padding: 40px 0;
+  padding: 8.1rem 0 0 0;
+
+  &__innerCont {
+    width: 76.38%;
+    margin: 0 auto;
+    @include u-flex($jc: space-between, $ai: center);
+    @include u-mqMax(900px) {
+      width: 92%;
+      @include u-flex($fd: column)
+    }
+  }
+
+  &__navList {
+    padding-bottom: 8.9rem;
+    @include u-flex($jc: space-between);
+    @include u-mqMax(900px) {
+      flex-direction: column;
+    }
+  }
+
+  &__navItemLink {
+    display: inline-block;
+    @include u-articleText($fz: 1.6rem, $ls: 0.1em, $fw: bold, $ff: "游ゴシック体");
+    @include u-trs;
+    @include u-hoverOp;
+    &:hover {
+      color: $white;
+    }
+    @include u-mqMax(900px) {
+      margin-top: 2.5rem;
+    }
+  }
+
+  &__address {
+    @include u-articleText($fz: 1.6rem, $fw: bold, $ff: "游ゴシック体", $lh: 2.4);
+    @include u-mqMax(768px) {
+      @include u-articleText($fz: 1.4rem, $lh: 2.14em)
+    }
+  }
+
+  &__polityLeftLink {
+    display: inline-block;
+    width: 13.3rem;
+    margin-right: 1.9rem;
+    @include u-trs;
+    @include u-hoverOp;
+  }
+
+  &__polityRightLink {
+    display: inline-block;
+    width: 5.6rem;
+    @include u-trs;
+    @include u-hoverOp;
+  }
+
+  &__polityText {
+    display: block;
+    padding: 3rem 0 7.3rem 0;
+    @include u-trs;
+    @include u-hoverOp;
+    @include u-articleText($fz: 1.4rem, $fw: bold, $ff: "游ゴシック体");
+    &:hover {
+      color: $white;
+    }
+    @include u-mqMax(900px) {
+      position: relative;
+      top: -12rem;
+      left: 0;
+      padding: 0;
+    }
+  }
+
+  &__rightCont {
+    width: 36.54%;
+    min-width: 40.2rem;
+    position: relative;
+    @include u-mqMax(900px) {
+      min-width: 100%;
+    }
+  }
+
+  &__leftCont {
+    width: 19rem;
+    @include u-mqMax(768px) {
+      width: 16rem;
+    }
+  }
+
+
+  &__facebookLink {
+    display: inline-block;
+    width: 12.73px;
+    position: absolute;
+    bottom: 10%;
+    right: 50px;
+    @include u-trs;
+    @include u-hoverOp;
+    @include u-mqMax(768px) {
+      width: 1.647rem;
+      right: 7rem;
+    }
+  }
+
+  &__twitterLink {
+    display: inline-block;
+    width: 23.77px;
+    position: absolute;
+    bottom: 10%;
+    right: 0;
+    @include u-trs;
+    @include u-hoverOp;
+    @include u-mqMax(768px) {
+      width: 3.067rem;
+      right: 1rem;
+    }
+  }
+
+  &__copyrights {
+    background-color: $black;
+    text-align: center;
+    padding: 8px 0;
+    @include u-articleText($color: $gray, $fw: 500);
+    @include u-mqMax(768px) {
+      font-size: 1.2rem;
+    }
+  }
 }

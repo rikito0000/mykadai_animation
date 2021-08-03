@@ -58,14 +58,11 @@
         { name: 'Mexico', value: '3'},
     ];
 
-
-
 doctype html
 html(lang="ja")
     head
         //- HEAD
         include ./_inc/_head.pug
-
 
     body.topPage#top
         //- HEADER
@@ -73,46 +70,93 @@ html(lang="ja")
 
         //- MAIN CONTENT
         main.siteContent(role="main")
-            section.sec01
-                -
-                    const card = [
-                      {
-                        num: '01',
-                        link: '#top',
-                        title: 'h1_01',
-                        text: 'text_01',
-                      },
-                      {
-                        num: '02',
-                        link: '#top',
-                        title: 'h1_02',
-                        text: 'text_02',
-                      },
-                      {
-                        num: '03',
-                        link: '#top',
-                        title: 'h1_03',
-                        text: 'text_03',
-                      },
-                    ]
-                ul.cardList01
-                    each item, index in card
-                        li.cardList01__item
-                            a.cardList01__link(href=`${item.link}`)
-                                figure.cardList01__thumb
-                                    img.cardList01__img(src=`${relativePath}/_assets/images/sample/sample_img-${item.num}.jpg` alt="#")
-                                    figcaption.cardList01__caption
-                                h3.cardList01__title !{item.title}
-                                p.cardList01__desc !{item.text}
+            section.fvSec
+                h1.fvSec__fvTitle <span class="bgWhite">WE MAKE</span><br>
+                    <span class="bgWhite">COMFORTABLE FUTURE</span><br>
+                    <span class="bgWhite">WITH INFORMATION</span><br>
+                    <span class="bgWhite">AND TECHNOLOGY</span>
+                p.fvSec__fvSubTitle FIND TRUE VALUE FROM ALL INFORMATION AND<br>REALIZE MORE COMFORTABLE DAYS
+                figure.fvSec__fvFig
+                    img.fvSec__fvImg.u-pcDb(src=`${relativePath}/_assets/images/fvSec/fvSec-img01.jpg`, alt="")
+                    img.fvSec__fvImg.u-spDb(src=`${relativePath}/_assets/images/fvSec/fvSec-img01_sp.jpg`, alt="")
+                figure.fvSec__fvCircleFig
+                    img.fvSec__fvCircleImg(src=`${relativePath}/_assets/images/fvSec/fvSec-circle.png`, alt="")
+                    //- img.fvSec__fvCircleImg.u-spDb(src=`${relativePath}/_assets/images/fvSec/circle_sp.png`, alt="")
+            section.philosSec
+                .philosSec__topCont
+                    figure.philosSec__topFig
+                        img.philosSec__topImg(src=`${relativePath}/_assets/images/philosophySec/philosophySec-img01.jpg`, alt="PHILOSOPHY")
+                    .philosSec__textCont
+                        h2.philosSec__title.subTitle PHILOSOPHY
+                        .philosSec__catchCopyArea
+                            p.philosSec__catchCopyText その情報から、<br>「価値」と「可能性」と<br>「確かな成果」を。
+                        .philosSec__descArea
+                            p.philosSec__descText お客様の声に正面から向き合い、<br>課題発見から改善までの最適な道筋を描き出す。<br>そこにこそ、アイ・タップの強みはあります。<br>例えばビッグデータ。<br>そのままで意味をなさない情報の海から、価値ある情報を見出す。<br>そこに知恵とアイデアを惜しみなく注ぎこみ、<br>新たな可能性へと膨らませる。<br>そして、たくましい実行力と熱意をもって、<br>成果につながるしくみへと具現化していく。<br>それを可能とする豊かな実績とノウハウを、私たちは持っています。<br>分析から提案・システム構築まで、<br>一連の流れに「次の一手」を生み出すアルゴリズムを。<br>それが、私たちのアルゴリストの使命です。
+                .philosSec__bottomCont
+                    .philosSec__bottomInner
+                        .philosSec__bottomBox
+                            figure.philosSec__bottomContFig
+                                img.philosSec__bottomContImg(src=`${relativePath}/_assets/images/philosophySec/philosophySec-img02.jpg`, alt="")
+                            p.philosSec__bottomContText 企業理念
+                        .philosSec__bottomBox
+                            figure.philosSec__bottomContFig
+                                img.philosSec__bottomContImg(src=`${relativePath}/_assets/images/philosophySec/philosophySec-img03.jpg`, alt="")
+                            p.philosSec__bottomContText 代表メッセージ
+                        .philosSec__bottomBox
+                            figure.philosSec__bottomContFig
+                                img.philosSec__bottomContImg(src=`${relativePath}/_assets/images/philosophySec/philosophySec-img04.jpg`, alt="")
+                            p.philosSec__bottomContText アルゴリズム宣言
+            section.serviceSec
+                .serviceSec__topCont
+                    .serviceSec__textCont
+                        h2.serviceSec__title.subTitle SERVICE
+                        .serviceSec__oneOfServices
+                            p.serviceSec__serviceName Business Outsource<br><span class="textJp">ビジネスアウトソーシング</span>
+                        .serviceSec__descArea
+                            p.serviceSec__descText.descriptionText お客様の特定業務をお預かりするだけの単なるアウトソーシーではなく、<br>スタッフがお客様のビジネスプロセスを正確に理解し、そのプロセ<br>スをより効率的に実行するためのITツールを自らが開発・運用すること<br>で、より高い業務クオリティと生産性を実現します。<br>その中でも主力となるのが「回線管理」に関連したBPOサービス。<br>アイ・タップは、回線管理サービスで培った運用ノウハウをベースに、<br>今後も1ランク上のBPOサービスを目指して、お客様の業務コスト削減に<br>貢献します。
+                        a.serviceSec__bottomLink.moreLink(href="#") VIEW MORE
+                    figure.serviceSec__topFig
+                        img.serviceSec__topImg(src=`${relativePath}/_assets/images/serviceSec/serviceSec-img01.jpg`, alt="")
 
-            section.sec02
-                ul.cardList02
-                    - for (var x = 0; x < 6; x++)
-                        li.cardList02__item
-                            a.cardList02__link(href="#")
-                                figure.cardList02__thumb
-                                    img.cardList01__img(src=`https://placehold.jp/300x300.png` alt="#")
-                                    figcaption.cardList02__caption Name
+                .serviceSec__bottomCont
+                    h3.serviceSec__subTitle OTHER SERVICES
+                    .serviceSec__bottomInner
+                        .serviceSec__bottomInnerBox
+                            figure.serviceSec__bottomFig
+                                img.serviceSec__bottomImg(src=`${relativePath}/_assets/images/serviceSec/serviceSec-img02.jpg`, alt="Application Development")
+                            p.serviceSec__serviceName.bottomText Application Development<br><span class="textJp">アプリ構築</span>
+                            a.serviceSec__bottomLink.moreLink(href="#") VIEW MORE
+                        .serviceSec__bottomInnerBox
+                            figure.serviceSec__bottomFig
+                                img.serviceSec__bottomImg(src=`${relativePath}/_assets/images/serviceSec/serviceSec-img03.jpg`, alt="Data Analyst & Data Scientist")
+                            p.serviceSec__serviceName.bottomText Data Analyst & Data Scientist<br><span class="textJp">データ分析＆データサイエンス</span>
+                            a.serviceSec__bottomLink.moreLink(href="#") VIEW MORE
+            section.recruitSec
+                .recruitSec__innerCont
+                    figure.recruitSec__fig
+                        img.recruitSec__img(src=`${relativePath}/_assets/images/recruitSec/recruitSec-img01.jpg`, alt="")
+                    .recruitSec__rightArea
+                        h2.recruitSec__title.subTitle RECRUIT
+                        p.recruitSec__descText.descriptionText 私たちは常に進化を続けるプロフェッショナルとして、<br>日々の鍛錬を怠らず、<br>最新のITテクノロジーと知恵とアイデアをフル活用し<br>て、お客様の事業に貢献することを宣言します。<br>私たちは、常に和と感謝の精神を基本的に行動し、<br>お客様、パートナー様、社員関係者と共に発展します。
+                        a.recruitSec__bottomLink.moreLink(href="#") VIEW MORE
+
+            section.newsSec
+                .newsSec__innerCont.container
+                    h2.newsSec__title.subTitle NEWS
+                    .newsSec__rightArea
+                        dl.newsSec__list
+                            dt.newsSec__itemTime 2021.02.05
+                            dd.newsSec__itemText WEBサイトをリニューアルしました
+                            dt.newsSec__itemTime 2021.01.01
+                            dd.newsSec__itemText 会社分割および持株会社体制移行のご挨拶
+                            dt.newsSec__itemTime 2020.05.18
+                            dd.newsSec__itemText 採用ポジションを追加しました
+                        p.newsSec__textLink.textLink
+                            a.newsSec__bottomLink.moreLink(href="#") VIEW MORE
+
+            section.contactSec
+                h2.contactSec__title CONTACT
+                a.contactSec__textJp(href="#") お問い合わせはこちらから
 
         //- FOOTER
         include ./_inc/_siteFooter.pug
