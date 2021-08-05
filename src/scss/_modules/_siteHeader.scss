@@ -21,16 +21,18 @@ siteHeader
 
   &__hamburger {
     width: 5em;
+    height: 5em;
+    display: block;
     position: absolute;
-    top: 40px;
-    right: 40px;
+    top: 20px;
+    right: 3%;
     z-index: 200;
   }
 
   &__hamburgerLine {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 45%;
+    right: 25%;
     width: 54%;
     height: 3px;
     background-color: $black;

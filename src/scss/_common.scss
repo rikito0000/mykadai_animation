@@ -95,19 +95,19 @@ PC/SP
 /*-----------------------------------------------
 main
 ------------------------------------------------*/
-.siteContent {
-  min-height: calc(100vh - #{$headerHeightPC + $headerHeightPC});
-  padding-top: $headerHeightPC;
+// .siteContent {
+//   min-height: calc(100vh - #{$headerHeightPC + $headerHeightPC});
+//   padding-top: $headerHeightPC;
 
-  .is_login_user & {
-  }
+//   .is_login_user & {
+//   }
 
-  // SP
-  @include u-mqMax($maxW: $windowSP) {
-    min-height: calc(100vh - #{$footerHeightSP});
-    padding-top: $headerHeightSP;
-  }
-}
+//   // SP
+//   @include u-mqMax($maxW: $windowSP) {
+//     min-height: calc(100vh - #{$footerHeightSP});
+//     padding-top: $headerHeightSP;
+//   }
+// }
 
 .bgWhite {
   display: inline-block;
@@ -115,4 +115,3 @@ main
   padding: 0 1rem;
   margin-bottom: 0.9rem;
 }
-

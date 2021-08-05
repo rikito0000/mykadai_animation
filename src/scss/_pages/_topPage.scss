@@ -5,22 +5,32 @@ topPageFvSec
   position: relative;
 }
 
+
 /*-----------------------------------------------
 fvSec
 ------------------------------------------------*/
 .fvSec {
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   z-index: 1;
+  background: url('../images/fvSec/fvSec-circle.png') no-repeat;
+  background-size: contain;
+
+  @include u-mqMax(768px) {
+    background: url('../images/fvSec/circle_sp.png') no-repeat;
+    background-size: 200%;
+    background-position: right top;
+  }
 
 
   &__fvTitle {
     position: absolute;
-    top: 40%;
-    left: 15%;
+    bottom: 30%;
+    left: 12.5%;
     z-index: 3;
-    @include u-articleText($color: $black, $fz: 6rem, $ff: "barlow", $fw: bold, $ls: 0, $lh: 1.25em);
+    @include u-articleText($color: $black, $fz: 6rem, $ff: "barlow", $fw: bold, $ls: 0, $lh: 1.1em);
     @include u-mqMax(768px) {
+      bottom: 30%;
       font-size: 3.2rem;
       left: 2.5%;
     }
@@ -29,10 +39,11 @@ fvSec
   &__fvSubTitle {
     position: absolute;
     bottom: 10%;
-    left: 15%;
+    left: 12.5%;
     z-index: 3;
     @include u-articleText($color: $black, $fz: 3rem, $ff: "barlow", $fw: bold, $ls: 0, $lh: 1.46em);
     @include u-mqMax(768px) {
+      bottom: 10%;
       font-size: 2rem;
       line-height: 1.5em;
       left: 2.5%;
@@ -41,21 +52,28 @@ fvSec
 
   &__fvFig {
     width: 76.38vw;
+    min-width: 900px;
     position: absolute;
     top: 0;
     right: 0;
     z-index: 2;
     @include u-mqMax(768px) {
+      width: 92%;
+      min-width: 300px;
       padding-top: 6rem;
     }
   }
 
   &__fvCircleFig {
     width: 69.41%;
+    min-width: 50%;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 1;
+    @include u-mqMax(768px) {
+      width: 100%;
+    }
   }
 }
 
@@ -64,45 +82,61 @@ philosophySec
 ------------------------------------------------*/
 .philosSec {
   position: relative;
-  margin-top: -100px;
   z-index: 2;
+  @include u-mqMax(768px) {
+    padding-top: 8rem;
+  }
 
   &__topCont {
-  @include u-flex;
-  @include u-mqMax(768px) {
-    flex-direction: column;
-  }
+    width: 88.19%;
+    margin: auto 0 0 0;
+    @include u-flex($jc: space-between);
+    @include u-mqMax(768px) {
+      width: 100%;
+      flex-direction: column;
+    }
   }
 
   &__topFig {
-    width: 43.05%;
+    width: 48.81%;
+    min-width: 400px;
     @include u-mqMax(768px) {
-      width: 80%;
+      width: 92%;
+      min-width: 250px;
     }
   }
 
   &__textCont {
-    width: calc(100% - 43.05%);
+    width: 43.3%;
+    min-width: 470px;
+    @include u-mqMax(768px) {
+      width: 92%;
+      min-width: 0;
+      margin: 0 auto 5rem;
+    }
   }
 
   &__title {
-    padding: 50px 0 50px 100px;
+    position: absolute;
+    top: 2%;
+    left: 50%;
     @include u-mqMax (768px) {
-      padding: 0;
+      top: 0;
+      left: 15%;
     }
   }
 
   &__catchCopyText {
-    padding: 0 0 50px 100px;
+    padding-top: 25.5%;
     @include u-articleText($color: $black, $fz: 3rem, $ff: "游ゴシック体", $fw: bold, $lh: 1.7em);
     @include u-mqMax (768px) {
       font-size: 2rem;
-      padding: 0;
+      padding: 3.6rem 0;
     }
   }
 
   &__descText {
-    padding: 0 0 50px 100px;
+    padding: 9% 0 18%;
     @include u-articleText($color: $black, $fz: 1.6rem, $ff: "游ゴシック体", $fw: 500, $lh: 2.31em);
     @include u-mqMax (768px) {
       font-size: 1.4rem;
@@ -110,10 +144,12 @@ philosophySec
     }
   }
 
-
   &__bottomCont {
     padding: 50px 0;
     background:linear-gradient(to left, #f0e373, #9dd2ee);
+    @include u-mqMax(768px) {
+      background:linear-gradient(to bottom, #f0e373, #9dd2ee);
+    }
   }
 
   &__bottomInner {
@@ -130,6 +166,9 @@ philosophySec
     width: 31.8%;
     @include u-mqMax(768px) {
       width: 100%;
+      &:not(:first-child) {
+        margin-top: 3rem;
+      }
     }
   }
 
@@ -145,50 +184,119 @@ philosophySec
 serviceSec
 ------------------------------------------------*/
 .serviceSec {
+  background-image: url("../images/serviceSec/circleBg_pc.png");
+  background-repeat: no-repeat;
+  background-position: -150% -30%;
   position: relative;
-  margin: 12rem 0;
-
+  padding-top: 12rem;
   &__title {
-    padding-bottom: 50px;
+    position: absolute;
+    top: 5%;
+    left: 12%;
+  }
+  @include u-mqMax(768px) {
+    background-image: url("../images/serviceSec/circleBg.png");
+    background-repeat: no-repeat;
+    background-size: 1291px;
+    background-position: 25% 50%;
+    padding: 9rem 0 0 0;
+    margin-top: 5rem;
   }
 
   &__serviceName {
-    @include u-articleText($color: $black, $fz: 3rem, $ff: "游ゴシック体", $fw: bold,  $lh: 1.68em)
+    @include u-articleText($color: $black, $fz: 3rem, $ff: "游ゴシック体", $fw: bold,  $lh: 1.68em);
+    @include u-mqMax(768px) {
+      padding: 2rem 0 4.1rem 0;
+      font-size: 2rem;
+    }
+  }
+
+  &__otherServiceName {
+    margin: 2rem 0  6.1rem 0;
+    @include u-articleText($color: $black, $fz: 3rem, $ff: "游ゴシック体", $fw: bold,  $lh: 1.68em);
+    @include u-mqMax(768px) {
+      padding: 2rem 0 4.1rem 0;
+      font-size: 2rem;
+    }
   }
 
   .textJp {
-    @include u-articleText($color: $black, $fz: 1.6rem, $ff: "游ゴシック体", $fw: bold,  $lh: 1.68em)
+    @include u-articleText($color: $black, $fz: 1.6rem, $ff: "游ゴシック体", $fw: 500,  $lh: 1.68em);
+    @include u-mqMax(768px) {
+      font-size: 1.4rem;
+    }
   }
 
   &__topCont {
-    width: 76.38%;
-    margin: 0 auto;
-    @include u-flex($jc: space-between);
+    width: 88.19%;
+    margin: 0 0 0 auto;
+    @include u-flex($jc: space-between, $ai: start);
+    @include u-mqMax(768px) {
+      width: 100%;
+      flex-direction: column;
+    }
   }
 
   &__topFig {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 43.05%;
+    width: 62rem;
+    @include u-mqMax(768px) {
+      order: -1;
+      width: 92%;
+      position: absolute;
+      right: 0;
+    }
+  }
+
+  &__title {
+    @include u-mqMax(768px) {
+      position: absolute;
+      top: 0;
+      right: 4%;
+    }
   }
 
   &__textCont {
-    width: calc(100% - 43.05%);
+    position: relative;
+    margin-top: 6rem;
+    width: calc(100% - 56.36%);
+    @include u-mqMax(768px) {
+      position: relative;
+      width: 92%;
+      margin: 0 auto;
+      padding-top: 66.5%;
+    }
   }
 
   &__descText {
-    padding: 54px 30px 50px 0;
+    padding: 54px 30px 60px 0;
+    @include u-mqMax(768px) {
+      padding: 0 0 4.1rem 0;
+    }
   }
 
   &__bottomCont {
-    width: 76.38%;
-    margin: 0 auto;
-    padding-top: 10rem;
+    padding: 10rem 0 12rem;
+    @include u-mqMax(768px) {
+      padding-top: 5rem;
+    }
   }
 
   &__bottomInner {
-    @include u-flex($jc: space-between, $ai: center);
+    @include u-flex($jc: space-between, $ai: stretch);
+    @include u-mqMax(768px) {
+      @include u-flex($fd: column)
+    }
+  }
+
+  &__bottomInnerBox {
+    position: relative;
+    width: 47.24%;
+    @include u-mqMax(768px) {
+      width: 100%;
+      &:first-child {
+        margin-bottom: 3rem;
+      }
+    }
   }
 
   &__bottomText {
@@ -196,11 +304,22 @@ serviceSec
   }
 
   &__subTitle {
-    @include u-articleText($color: black, $fz: 3rem, $ff: "Barlow", $fw: bold, $ls: 0, $lh: 1.2em)
+    margin-bottom: 4rem;
+    @include u-articleText($color: black, $fz: 3rem, $ff: "Barlow", $fw: bold, $ls: 0, $lh: 1.2em);
+    @include u-mqMax(768px) {
+      padding-bottom: 3rem;
+      font-size: 2rem;
+    }
   }
 
-  &__bottomFig {
-    width: 94.54%
+  &__serviceBottomLink {
+      position: absolute;
+      bottom: 0;
+      left: 0%;
+    @include u-mqMax(768px) {
+      display: inline-block;
+      left: 65%;
+    }
   }
 }
 
@@ -208,21 +327,61 @@ serviceSec
 recruitSec
 ------------------------------------------------*/
 .recruitSec {
-
+  position: relative;
+  @include u-mqMax(768px) {
+    padding: 13.7rem 0 5rem;
+  }
   &__innerCont {
     width: 88.19%;
-    @include u-flex($jc: space-between);
+    @include u-flex($jc: space-between, $ai: center);
+    @include u-mqMax(768px) {
+      width: 100%;
+      flex-direction: column;
+    }
+  }
+
+  &__title {
+    position: absolute;
+    top: 20%;
+    right: 21%;
+    @include u-mqMax(1100px) {
+      top: 0;
+      right: 18%;
+    }
   }
   &__fig {
     width: 60.94%;
+    min-width: 38.7rem;
+    @include u-mqMax(768px) {
+      width: 100%;
+      min-width: 0;
+    }
   }
 
   &__descText {
-    padding: 4.6rem 0 4rem 0;
+    min-width: 38rem;
+    @include u-mqMax(768px) {
+      min-width: 0;
+      padding: 0;
+    }
   }
 
   &__rightArea {
-    padding: 8.4rem 0 8rem 0
+    padding: 9% 0 0 3%;
+    @include u-mqMax(768px) {
+      position: relative;
+      width: 92%;
+      margin: 0 auto;
+    }
+  }
+
+  &__bottomLink {
+    @include u-mqMax(768px) {
+      display: block;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
   }
 }
 
@@ -230,8 +389,9 @@ recruitSec
 newsSec
 ------------------------------------------------*/
 .newsSec {
+  position: relative;
   background-color: #F4F4F4;
-  padding: 10em 0 11.3rem 0;
+  padding: 10em 0 5rem 0;
 
   &__innerCont {
     position: relative;
@@ -243,6 +403,11 @@ newsSec
 
   &__rightArea {
     width: 68.18%;
+    min-width: 550px;
+    @include u-mqMax(768px) {
+      width: 100%;
+      min-width: 0;
+    }
   }
 
   &__list {
@@ -250,6 +415,7 @@ newsSec
     @include u-flex($fw: wrap);
     @include u-mqMax(768px) {
       flex-flow: column;
+      padding: 3.9rem 0 0 0;
     }
   }
 
@@ -257,13 +423,24 @@ newsSec
     flex-basis: 20%;
     border-bottom: 1px solid #ccc;
     padding-left: 1.5rem;
-    @include u-articleText($color: black, $fz: 1.6rem, $ff: "Barlow", $fw: bold,  $lh: 5em)
+    @include u-articleText($color: black, $fz: 1.6rem, $ff: "Barlow", $fw: bold,  $lh: 5em);
+    @include u-mqMax(768px) {
+      font-size: 1.4rem;
+      line-height: 2.14;
+      border-bottom: 0;
+      padding: 2rem 0 1.5rem 1.5rem;
+    }
   }
 
   &__itemText {
     flex-basis: 70%;
     border-bottom: 1px solid #ccc;
-    @include u-articleText($color: black, $fz: 1.6rem, $ff: "游ゴシック体", $fw: 500,  $lh: 5em)
+    @include u-articleText($color: black, $fz: 1.6rem, $ff: "游ゴシック体", $fw: 500,  $lh: 5em);
+    @include u-mqMax(768px) {
+      font-size: 1.4rem;
+      line-height: 2.14;
+      padding: 0 0 2rem 1.5rem;
+    }
   }
 
   &__bottomLink {
@@ -271,22 +448,48 @@ newsSec
     position: absolute;
     top: 60%;
     left: 0;
+    @include u-mqMax(768px) {
+      display: inline-block;
+      top: 120%;
+      left: 65%;
+      margin-top: 3rem;
+    }
   }
+
+
 }
 /*-----------------------------------------------
 contactSec
 ------------------------------------------------*/
 .contactSec {
+  position: relative;
   text-align: center;
   padding: 9rem 0 8.4rem 0;
   background:linear-gradient(to left, #f0e373, #9dd2ee);
 
   &__title {
     @include u-articleText($color: $black, $fz: 5rem,  $ff: "barlow", $fw: bold);
+    @include u-mqMax(768px) {
+      font-size: 4rem;
+    }
   }
 
   &__textJp {
-    @include u-articleText($color: black, $fz: 1.6rem, $ff: "游ゴシック体", $fw: 500,  $lh: 5em)
+    @include u-articleText($color: black, $fz: 1.6rem, $ff: "游ゴシック体", $fw: 500,  $lh: 5em);
+    @include u-mqMax(768px) {
+      font-size: 1.4rem;
+      line-height: 5.7;
+    }
+  }
+  &__arrow {
+    position: absolute;
+    top: 45%;
+    right: 4%;
+    &:before {
+      position: relative;
+      top: 40%;
+      left: 35%
+    }
   }
 }
 
@@ -295,56 +498,72 @@ common parts
 ------------------------------------------------*/
 .subTitle {
   @include u-articleText($color: $black, $fz: 5rem,  $ff: "barlow", $fw: bold);
-  // &:before {
-  //   content:"";
-  //   display:inline-block;
-  //   width: 40px;
-  //   height: 30px;
-  //   background:url(../images/circle.png) no-repeat;
-  //   background-size: 2.4rem 1.6rem;
-  //   background-position: top 50% left 0;
-  // }
+  &:before {
+    content: "";
+    display:inline-block;
+    width: 40px;
+    height: 30px;
+    background:url(../images/circle.png) no-repeat;
+    background-size: 2.4rem 1.6rem;
+    background-position: top 50% left 0;
+  }
 
   @include u-mqMax(768px) {
-    font-size: 4rem
+    font-size: 4rem;
   }
 }
 
 .moreLink {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  // position: relative;
   @include u-trs;
   @include u-hoverOp;
   @include u-articleText($color: black, $fz: 1.4rem, $ff: "Barlow", $fw: 500, $lh: 1.21em);
   &:hover {
     color: $black;
   }
-  // &:before{
-  //   content: '';
-  //   display: block;
-  //   width: 4rem;
-  //   height: 4rem;
-  //   border-radius: 50%;
-  //   border: 1px solid #888;
-  //   position: absolute;
-  //   top: -10px;
-  //   right: -60px;
-  // }
-  // &:after{
-  //   content: '';
-  //   display: block;
-  //   left: 3px;
-  //   width: 1rem;
-  //   height: 1rem;
-  //   border-top: 2px solid $black;
-  //   border-right: 2px solid $black;
-  //   transform: rotate(45deg);
-  //   position: absolute;
-  //   top: -10px;
-  //   right: -199o;
-  // }
+  &:before{
+    content: '';
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border: 1px solid #888;
+    border-radius: 50%;
+    position: absolute;
+    top: -60%;
+    left: 9rem;
+    @include u-mqMax(768px) {
+      top: -10%;
+      right: -55%;
+    }
+  }
+  &:after{
+    content: '';
+    display: inline-block;
+    width: .6rem;
+    height: .6rem;
+    border-top: 2px solid $black;
+    border-right: 2px solid $black;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 45%;
+    left: 10.5rem;
+    @include u-mqMax(768px) {
+      top: 45%;
+      right: -40%;
+    }
+  }
 }
 
 .descriptionText {
   @include u-articleText($color: black, $fz: 1.6rem, $ff: "游ゴシック体", $fw: 500,  $lh: 2.31em);
+  @include u-mqMax(768px) {
+    font-size: 1.4rem;
+    line-height: 2.142em;
+  }
 }
 
 .container {
@@ -354,3 +573,146 @@ common parts
     width: 92%;
   }
 }
+
+.rightArrow {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border: 1px solid #888;
+    border-radius: 50%;
+    position: absolute;
+    &:before {
+      content: '';
+      display: block;
+      width: .6rem;
+      height: .6rem;
+      border-top: 2px solid $black;
+      border-right: 2px solid $black;
+      transform: rotate(45deg);
+      position: absolute;
+      top: 40%;
+      left: 40%;
+    }
+  }
+
+  .modalSec {
+    display: none;
+    @include u-trs;
+    &.is-open {
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: #242424;
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding-top: 21.4rem;
+      z-index: 9999;
+      @include u-mqMax(768px) {
+        padding-top: 9.5rem;
+      }
+    }
+
+      &__navItem {
+      color: #fff;
+      font-size: 3rem;
+      }
+      &__hamburger {
+        width: 5em;
+        height: 5em;
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 3%;
+        z-index: 9999;
+      }
+
+      &__hamburgerLine {
+        position: absolute;
+        top: 45%;
+        right: 25%;
+        width: 54%;
+        height: 3px;
+        background-color: $white;
+        border-radius: 3px;
+        transition: 0.5s 0.25s;
+        z-index: 9999;
+        &:nth-child(1) {
+          transform: rotate(135deg);
+        }
+        &:nth-child(2) {
+          opacity: 0;
+        }
+        &:nth-child(3) {
+          transform: rotate(-135deg);
+        }
+      }
+
+      &__navList {
+        @include u-flex($fw: wrap, $jc: space-between);
+        @include u-mqMax(768px) {
+          flex-direction: column;
+        }
+      }
+
+      &__navItem {
+        width: 42%;
+        min-width: 461px;
+        &:last-child {
+          margin-top: 5rem;
+        }
+        @include u-flex;
+        @include u-mqMax(768px) {
+          min-width: 0;
+          border-bottom: 1px solid #888;
+          flex-direction: column;
+        }
+      }
+
+      &__navItemLinkList {
+        @include u-flex($fd: column);
+        @include u-mqMax(768px) {
+          padding-left: 40px;
+          width: 85.13%;
+        }
+      }
+
+      &__navItemTitle {
+        margin-right: 6rem;
+        @include u-articleText($color: $white, $fz: 3rem, $ff: "游ゴシック体", $fw: bold, $lh: 1.7em);
+        @include u-mqMax(768px) {
+          font-size: 2rem;
+        }
+      }
+
+      &__navItemLink {
+        @include u-articleText($color: $white, $fz: 1.6rem, $ff: "游ゴシック体", $fw: 500, $lh: 3.1em);
+        @include u-mqMax(768px) {
+          font-size: 1.4rem;
+        }
+      }
+
+      &__navItemInfoLink {
+        &:first-child {
+          &:after {
+            content: '';
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin-left: 1.1rem;
+            background: url('../images/linkLogo.png') no-repeat;
+            background-size: contain;
+            position: relative;
+            top: 3px;
+            left: 0;
+          }
+          margin-right: 6rem;
+        }
+        @include u-articleText($color: $white, $fz: 2rem, $ff: "游ゴシック体", $fw: bold, $lh: 1.7em);
+      }
+
+      .textEng {
+        @include u-articleText($color: #707070, $fz: 1.4rem, $ff: "Barlow", $fw: 500);
+      }
+  }

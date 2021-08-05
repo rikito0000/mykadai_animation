@@ -71,23 +71,21 @@ html(lang="ja")
         //- MAIN CONTENT
         main.siteContent(role="main")
             section.fvSec
-                h1.fvSec__fvTitle <span class="bgWhite">WE MAKE</span><br>
-                    <span class="bgWhite">COMFORTABLE FUTURE</span><br>
-                    <span class="bgWhite">WITH INFORMATION</span><br>
-                    <span class="bgWhite">AND TECHNOLOGY</span>
-                p.fvSec__fvSubTitle FIND TRUE VALUE FROM ALL INFORMATION AND<br>REALIZE MORE COMFORTABLE DAYS
-                figure.fvSec__fvFig
-                    img.fvSec__fvImg.u-pcDb(src=`${relativePath}/_assets/images/fvSec/fvSec-img01.jpg`, alt="")
-                    img.fvSec__fvImg.u-spDb(src=`${relativePath}/_assets/images/fvSec/fvSec-img01_sp.jpg`, alt="")
-                figure.fvSec__fvCircleFig
-                    img.fvSec__fvCircleImg(src=`${relativePath}/_assets/images/fvSec/fvSec-circle.png`, alt="")
-                    //- img.fvSec__fvCircleImg.u-spDb(src=`${relativePath}/_assets/images/fvSec/circle_sp.png`, alt="")
-            section.philosSec
+                .fvSec__innerCont
+                    h1.fvSec__fvTitle <span class="bgWhite">WE MAKE</span><br>
+                        <span class="bgWhite">COMFORTABLE FUTURE</span><br>
+                        <span class="bgWhite">WITH INFORMATION</span><br>
+                        <span class="bgWhite">AND TECHNOLOGY</span>
+                    p.fvSec__fvSubTitle FIND TRUE VALUE FROM<br class="u-pcDb">ALL INFORMATION AND<br class="u-spDb">REALIZE<br class="u-pcDb">MORE COMFORTABLE DAYS
+                    figure.fvSec__fvFig
+                        img.fvSec__fvImg.u-pcDb(src=`${relativePath}/_assets/images/fvSec/fvSec-img01.jpg`, alt="")
+                        img.fvSec__fvImg.u-spDb(src=`${relativePath}/_assets/images/fvSec/fvSec-img01_sp.jpg`, alt="")
+            //- section.philosSec
+                h2.philosSec__title.subTitle PHILOSOPHY
                 .philosSec__topCont
                     figure.philosSec__topFig
                         img.philosSec__topImg(src=`${relativePath}/_assets/images/philosophySec/philosophySec-img01.jpg`, alt="PHILOSOPHY")
                     .philosSec__textCont
-                        h2.philosSec__title.subTitle PHILOSOPHY
                         .philosSec__catchCopyArea
                             p.philosSec__catchCopyText その情報から、<br>「価値」と「可能性」と<br>「確かな成果」を。
                         .philosSec__descArea
@@ -107,38 +105,39 @@ html(lang="ja")
                                 img.philosSec__bottomContImg(src=`${relativePath}/_assets/images/philosophySec/philosophySec-img04.jpg`, alt="")
                             p.philosSec__bottomContText アルゴリズム宣言
             section.serviceSec
+                h2.serviceSec__title.subTitle SERVICE
                 .serviceSec__topCont
                     .serviceSec__textCont
-                        h2.serviceSec__title.subTitle SERVICE
                         .serviceSec__oneOfServices
                             p.serviceSec__serviceName Business Outsource<br><span class="textJp">ビジネスアウトソーシング</span>
                         .serviceSec__descArea
-                            p.serviceSec__descText.descriptionText お客様の特定業務をお預かりするだけの単なるアウトソーシーではなく、<br>スタッフがお客様のビジネスプロセスを正確に理解し、そのプロセ<br>スをより効率的に実行するためのITツールを自らが開発・運用すること<br>で、より高い業務クオリティと生産性を実現します。<br>その中でも主力となるのが「回線管理」に関連したBPOサービス。<br>アイ・タップは、回線管理サービスで培った運用ノウハウをベースに、<br>今後も1ランク上のBPOサービスを目指して、お客様の業務コスト削減に<br>貢献します。
-                        a.serviceSec__bottomLink.moreLink(href="#") VIEW MORE
+                            p.serviceSec__descText.descriptionText お客様の特定業務をお預かりするだけの単なるアウトソーシーではなく、<br class="u-pcDb">スタッフがお客様のビジネスプロセスを正確に理解し、そのプロセ<br class="u-pcDb">スをより効率的に実行するためのITツールを自らが開発・運用すること<br class="u-pcDb">で、より高い業務クオリティと生産性を実現します。<br>その中でも主力となるのが「回線管理」に関連したBPOサービス。<br>アイ・タップは、回線管理サービスで培った運用ノウハウをベースに、<br class="u-pcDb">今後も1ランク上のBPOサービスを目指して、お客様の業務コスト削減に<br class="u-pcDb">貢献します。
+                        a.serviceSec__serviceBottomLink.moreLink(href="#") VIEW MORE
                     figure.serviceSec__topFig
-                        img.serviceSec__topImg(src=`${relativePath}/_assets/images/serviceSec/serviceSec-img01.jpg`, alt="")
+                        img.serviceSec__topImg.u-pcDb(src=`${relativePath}/_assets/images/serviceSec/serviceSec-img01.jpg`, alt="")
+                        img.serviceSec__topImg.u-spDb(src=`${relativePath}/_assets/images/serviceSec/serviceSec-img01_sp.jpg`, alt="")
 
-                .serviceSec__bottomCont
+                .serviceSec__bottomCont.container
                     h3.serviceSec__subTitle OTHER SERVICES
                     .serviceSec__bottomInner
                         .serviceSec__bottomInnerBox
                             figure.serviceSec__bottomFig
                                 img.serviceSec__bottomImg(src=`${relativePath}/_assets/images/serviceSec/serviceSec-img02.jpg`, alt="Application Development")
-                            p.serviceSec__serviceName.bottomText Application Development<br><span class="textJp">アプリ構築</span>
-                            a.serviceSec__bottomLink.moreLink(href="#") VIEW MORE
+                            p.serviceSec__otherServiceName.bottomText Application Development<br><span class="textJp">アプリ構築</span>
+                            a.serviceSec__serviceBottomLink.moreLink(href="#") VIEW MORE
                         .serviceSec__bottomInnerBox
                             figure.serviceSec__bottomFig
                                 img.serviceSec__bottomImg(src=`${relativePath}/_assets/images/serviceSec/serviceSec-img03.jpg`, alt="Data Analyst & Data Scientist")
-                            p.serviceSec__serviceName.bottomText Data Analyst & Data Scientist<br><span class="textJp">データ分析＆データサイエンス</span>
-                            a.serviceSec__bottomLink.moreLink(href="#") VIEW MORE
+                            p.serviceSec__otherServiceName.bottomText Data Analyst & Data Scientist<br><span class="textJp">データ分析＆データサイエンス</span>
+                            a.serviceSec__serviceBottomLink.moreLink(href="#") VIEW MORE
             section.recruitSec
+                h2.recruitSec__title.subTitle RECRUIT
                 .recruitSec__innerCont
                     figure.recruitSec__fig
                         img.recruitSec__img(src=`${relativePath}/_assets/images/recruitSec/recruitSec-img01.jpg`, alt="")
                     .recruitSec__rightArea
-                        h2.recruitSec__title.subTitle RECRUIT
                         p.recruitSec__descText.descriptionText 私たちは常に進化を続けるプロフェッショナルとして、<br>日々の鍛錬を怠らず、<br>最新のITテクノロジーと知恵とアイデアをフル活用し<br>て、お客様の事業に貢献することを宣言します。<br>私たちは、常に和と感謝の精神を基本的に行動し、<br>お客様、パートナー様、社員関係者と共に発展します。
-                        a.recruitSec__bottomLink.moreLink(href="#") VIEW MORE
+                        //  - a.recruitSec__bottomLink.moreLink(href="#") VIEW MORE
 
             section.newsSec
                 .newsSec__innerCont.container
@@ -151,12 +150,64 @@ html(lang="ja")
                             dd.newsSec__itemText 会社分割および持株会社体制移行のご挨拶
                             dt.newsSec__itemTime 2020.05.18
                             dd.newsSec__itemText 採用ポジションを追加しました
-                        p.newsSec__textLink.textLink
-                            a.newsSec__bottomLink.moreLink(href="#") VIEW MORE
+                        //- p.newsSec__textLink.textLink
+                            //- a.newsSec__bottomLink.moreLink(href="#") VIEW MORE
+
 
             section.contactSec
                 h2.contactSec__title CONTACT
                 a.contactSec__textJp(href="#") お問い合わせはこちらから
+                a.contactSec__arrow.rightArrow(href="#")
+
+            .modalSec.modal
+                .modalSec__innerCont.container
+                    .modalSec__hamburger.modal__box__closeButton
+                        span.modalSec__hamburgerLine
+                        span.modalSec__hamburgerLine
+                        span.modalSec__hamburgerLine
+                    nav.modalSec__nav
+                        ul.modalSec__navList
+                            li.modalSec__navItem
+                                h3.modalSec__navItemTitle 会社情報<br class="u-pcDb"><span class="textEng">COMPANY</span>
+                                ul.modalSec__navItemLinkList
+                                    li.modalSec__navItemLinkItem
+                                        a.modalSec__navItemLink(href="#") 代表メッセージ
+                                    li.modalSec__navItemLinkItem
+                                        a.modalSec__navItemLink(href="#") 企業理念体型
+                                    li.modalSec__navItemLinkItem
+                                        a.modalSec__navItemLink(href="#") 全社アルゴリスト宣言
+                                    li.modalSec__navItemLinkItem
+                                        a.modalSec__navItemLink(href="#") 会社概要
+                                    li.modalSec__navItemLinkItem
+                                        a.modalSec__navItemLink(href="#") オフィス案内
+                            li.modalSec__navItem
+                                h3.modalSec__navItemTitle 企業ポリシー<br class="u-pcDb"><span class="textEng">POLICY</span>
+                                ul.modalSec__navItemLinkList
+                                    li.modalSec__navItemLinkItem
+                                        a.modalSec__navItemLink(href="#") 情報セキュリティ基本方針
+                                    li.modalSec__navItemLinkItem
+                                        a.modalSec__navItemLink(href="#") プライバシーポリシー
+                                    li.modalSec__navItemLinkItem
+                                        a.modalSec__navItemLink(href="#") 個人情報の取扱いについて
+                                    li.modalSec__navItemLinkItem
+                                        a.modalSec__navItemLink(href="#") 開示等の手続きについて
+                                    li.modalSec__navItemLinkItem
+                                        a.modalSec__navItemLink(href="#") 健康経営宣言
+                                    li.modalSec__navItemLinkItem
+                                        a.modalSec__navItemLink(href="#") 受動喫煙防止対策基本方針
+                            li.modalSec__navItem
+                                h3.modalSec__navItemTitle サービス<br class="u-pcDb"><span class="textEng">SERVICE</span>
+                                ul.modalSec__navItemLinkList
+                                    li.modalSec__navItemLinkItem
+                                        a.modalSec__navItemLink(href="#") Business OutSource
+                                    li.modalSec__navItemLink OTHER SERVICES
+                                        ul.modalSec__linkItemDetails
+                                            li.modalSec__linkItemDetailsItem Data Analyst & data Scientist
+                                            li.modalSec__linkItemDetailsItem Application Development
+                            li.modalSec__navItem
+                                a.modalSec__navItemInfoLink 採用情報
+                                a.modalSec__navItemInfoLink お問い合わせ
+
 
         //- FOOTER
         include ./_inc/_siteFooter.pug
