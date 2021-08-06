@@ -91,7 +91,7 @@ philosophySec
     width: 88.19%;
     margin: auto 0 0 0;
     @include u-flex($jc: space-between);
-    @include u-mqMax(768px) {
+    @include u-mqMax(800px) {
       width: 100%;
       flex-direction: column;
     }
@@ -99,8 +99,8 @@ philosophySec
 
   &__topFig {
     width: 48.81%;
-    min-width: 400px;
-    @include u-mqMax(768px) {
+    min-width: 300px;
+    @include u-mqMax(800px) {
       width: 92%;
       min-width: 250px;
     }
@@ -109,6 +109,9 @@ philosophySec
   &__textCont {
     width: 43.3%;
     min-width: 470px;
+    @include u-mqMax(1100px) {
+      padding-left: 10%;
+    }
     @include u-mqMax(768px) {
       width: 92%;
       min-width: 0;
@@ -230,18 +233,25 @@ serviceSec
   &__topCont {
     width: 88.19%;
     margin: 0 0 0 auto;
-    @include u-flex($jc: space-between, $ai: start);
-    @include u-mqMax(768px) {
+    @include u-flex($jc: space-between, $ai: center);
+    @include u-mqMax(1100px) {
       width: 100%;
+      margin: 0;
+    }
+    @include u-mqMax(768px) {
       flex-direction: column;
     }
   }
 
   &__topFig {
     width: 62rem;
+    min-width: 38.7rem;
+    @include u-mqMax(1100px) {
+      width: 40rem;
+    }
     @include u-mqMax(768px) {
-      order: -1;
       width: 92%;
+      order: -1;
       position: absolute;
       right: 0;
     }
@@ -267,9 +277,11 @@ serviceSec
     }
   }
 
-  &__descText {
+  &__descArea {
     padding: 54px 30px 60px 0;
+    min-width: 56rem;
     @include u-mqMax(768px) {
+      min-width: 0;
       padding: 0 0 4.1rem 0;
     }
   }
@@ -396,7 +408,7 @@ newsSec
   &__innerCont {
     position: relative;
     @include u-flex($jc: space-between);
-    @include u-mqMax(768px) {
+    @include u-mqMax(1100px) {
       flex-direction: column;
     }
   }
@@ -404,7 +416,7 @@ newsSec
   &__rightArea {
     width: 68.18%;
     min-width: 550px;
-    @include u-mqMax(768px) {
+    @include u-mqMax(1100px) {
       width: 100%;
       min-width: 0;
     }
@@ -569,7 +581,7 @@ common parts
 .container {
   width: 76.38%;
   margin: 0 auto;
-  @include u-mqMax(768px) {
+  @include u-mqMax(1100px) {
     width: 92%;
   }
 }
@@ -603,20 +615,23 @@ common parts
       display: block;
       width: 100%;
       height: 100%;
+      overflow-y: scroll;
       background-color: #242424;
       position: fixed;
       top: 0;
       left: 0;
-      padding-top: 21.4rem;
+      padding: 21.5rem 0 19rem;
       z-index: 9999;
-      @include u-mqMax(768px) {
+      @include u-mqMax(1100px) {
         padding-top: 9.5rem;
       }
     }
-
       &__navItem {
       color: #fff;
       font-size: 3rem;
+      @include u-mqMax(1005px) {
+        padding-top: 3rem;
+      }
       }
       &__hamburger {
         width: 5em;
@@ -627,7 +642,6 @@ common parts
         right: 3%;
         z-index: 9999;
       }
-
       &__hamburgerLine {
         position: absolute;
         top: 45%;
@@ -649,9 +663,17 @@ common parts
         }
       }
 
+
+      &__innerCont {
+        @include u-mqMax(1250px) {
+          width: 92%;
+          margin: 0 auto;
+        }
+      }
+
       &__navList {
         @include u-flex($fw: wrap, $jc: space-between);
-        @include u-mqMax(768px) {
+        @include u-mqMax(1005px) {
           flex-direction: column;
         }
       }
@@ -663,8 +685,9 @@ common parts
           margin-top: 5rem;
         }
         @include u-flex;
-        @include u-mqMax(768px) {
+        @include u-mqMax(1005px) {
           min-width: 0;
+          width: 100%;
           border-bottom: 1px solid #888;
           flex-direction: column;
         }
@@ -672,7 +695,7 @@ common parts
 
       &__navItemLinkList {
         @include u-flex($fd: column);
-        @include u-mqMax(768px) {
+        @include u-mqMax(1005px) {
           padding-left: 40px;
           width: 85.13%;
         }
@@ -681,14 +704,14 @@ common parts
       &__navItemTitle {
         margin-right: 6rem;
         @include u-articleText($color: $white, $fz: 3rem, $ff: "游ゴシック体", $fw: bold, $lh: 1.7em);
-        @include u-mqMax(768px) {
+        @include u-mqMax(1250px) {
           font-size: 2rem;
         }
       }
 
       &__navItemLink {
         @include u-articleText($color: $white, $fz: 1.6rem, $ff: "游ゴシック体", $fw: 500, $lh: 3.1em);
-        @include u-mqMax(768px) {
+        @include u-mqMax(1250px) {
           font-size: 1.4rem;
         }
       }
