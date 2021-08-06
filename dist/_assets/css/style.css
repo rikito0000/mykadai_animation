@@ -405,6 +405,42 @@ template {
   }
 }
 
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-o-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 @-webkit-keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -1508,15 +1544,13 @@ fvSec
   -moz-background-size: contain;
     -o-background-size: contain;
        background-size: contain;
+  background-position: top left;
 }
 
 @media screen and (max-width: 768px) {
   .fvSec {
     background: url("../images/fvSec/circle_sp.png") no-repeat;
-    -moz-background-size: 200%;
-      -o-background-size: 200%;
-         background-size: 200%;
-    background-position: right top;
+    background-position: top 110% right 30%;
   }
 }
 
@@ -1669,12 +1703,6 @@ philosophySec
   min-width: 470px;
 }
 
-@media screen and (max-width: 1100px) {
-  .philosSec__textCont {
-    padding-left: 10%;
-  }
-}
-
 @media screen and (max-width: 768px) {
   .philosSec__textCont {
     width: 92%;
@@ -1692,7 +1720,7 @@ philosophySec
 @media screen and (max-width: 768px) {
   .philosSec__title {
     top: 0;
-    left: 15%;
+    left: 4%;
   }
 }
 
@@ -1834,6 +1862,13 @@ serviceSec
 }
 
 @media screen and (max-width: 768px) {
+  .serviceSec__title {
+    top: 0;
+    left: 45%;
+  }
+}
+
+@media screen and (max-width: 768px) {
   .serviceSec {
     background-image: url("../images/serviceSec/circleBg.png");
     background-repeat: no-repeat;
@@ -1957,6 +1992,7 @@ serviceSec
 @media screen and (max-width: 768px) {
   .serviceSec__topFig {
     width: 92%;
+    min-width: 0;
     -webkit-box-ordinal-group: 0;
     -webkit-order: -1;
        -moz-box-ordinal-group: 0;
@@ -1964,14 +2000,6 @@ serviceSec
             order: -1;
     position: absolute;
     right: 0;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .serviceSec__title {
-    position: absolute;
-    top: 0;
-    right: 4%;
   }
 }
 
@@ -1988,7 +2016,7 @@ serviceSec
     position: relative;
     width: 92%;
     margin: 0 auto;
-    padding-top: 66.5%;
+    padding-top: 75%;
   }
 }
 
@@ -2426,6 +2454,10 @@ contactSec
 }
 
 .contactSec__textJp {
+  -webkit-transition: all 0.6s ease-in-out 0s;
+  -o-transition: all 0.6s ease-in-out 0s;
+  -moz-transition: all 0.6s ease-in-out 0s;
+  transition: all 0.6s ease-in-out 0s;
   color: black;
   font-size: 1.6rem;
   letter-spacing: 0.05em;
@@ -2434,11 +2466,21 @@ contactSec
   font-weight: 500;
 }
 
+@media screen and (min-width: 769px) {
+  .contactSec__textJp:hover {
+    opacity: 0.6;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .contactSec__textJp {
     font-size: 1.4rem;
     line-height: 5.7;
   }
+}
+
+.contactSec__textJp:hover {
+  color: #000;
 }
 
 .contactSec__arrow {
@@ -2526,16 +2568,15 @@ common parts
 
 @media screen and (max-width: 768px) {
   .moreLink:before {
-    top: -10%;
-    right: -55%;
+    top: -23%;
   }
 }
 
 .moreLink:after {
   content: '';
   display: inline-block;
-  width: .6rem;
-  height: .6rem;
+  width: 10px;
+  height: 10px;
   border-top: 2px solid #000;
   border-right: 2px solid #000;
   -webkit-transform: rotate(45deg);
@@ -2545,13 +2586,13 @@ common parts
           transform: rotate(45deg);
   position: absolute;
   top: 45%;
-  left: 10.5rem;
+  left: 10.3rem;
 }
 
 @media screen and (max-width: 768px) {
   .moreLink:after {
-    top: 45%;
-    right: -40%;
+    top: 25%;
+    left: 9.7rem;
   }
 }
 
@@ -2592,13 +2633,23 @@ common parts
      -moz-border-radius: 50%;
           border-radius: 50%;
   position: absolute;
+  -webkit-transition: all 0.6s ease-in-out 0s;
+  -o-transition: all 0.6s ease-in-out 0s;
+  -moz-transition: all 0.6s ease-in-out 0s;
+  transition: all 0.6s ease-in-out 0s;
+}
+
+@media screen and (min-width: 769px) {
+  .rightArrow:hover {
+    opacity: 0.6;
+  }
 }
 
 .rightArrow:before {
   content: '';
   display: block;
-  width: .6rem;
-  height: .6rem;
+  width: 1rem;
+  height: 1rem;
   border-top: 2px solid #000;
   border-right: 2px solid #000;
   -webkit-transform: rotate(45deg);
@@ -2611,16 +2662,36 @@ common parts
   left: 40%;
 }
 
+.textEng {
+  color: #707070;
+  font-size: 1.4rem;
+  letter-spacing: 0.05em;
+  line-height: 1.2;
+  font-family: "Barlow";
+  font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+  .textEng {
+    margin-left: 1rem;
+  }
+}
+
 .modalSec {
   display: none;
-  -webkit-transition: all 0.6s ease-in-out 0s;
-  -o-transition: all 0.6s ease-in-out 0s;
-  -moz-transition: all 0.6s ease-in-out 0s;
-  transition: all 0.6s ease-in-out 0s;
+  -webkit-animation: fadeOut 1s;
+     -moz-animation: fadeOut 1s;
+       -o-animation: fadeOut 1s;
+          animation: fadeOut 1s;
 }
 
 .modalSec.is-open {
   display: block;
+  -webkit-animation: fadeIn .3s;
+     -moz-animation: fadeIn .3s;
+       -o-animation: fadeIn .3s;
+          animation: fadeIn .3s;
+  opacity: 1;
   width: 100%;
   height: 100%;
   overflow-y: scroll;
@@ -2628,13 +2699,13 @@ common parts
   position: fixed;
   top: 0;
   left: 0;
-  padding: 21.5rem 0 19rem;
+  padding: 21.5rem 0 0 0;
   z-index: 9999;
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1005px) {
   .modalSec.is-open {
-    padding-top: 9.5rem;
+    padding-top: 6rem;
   }
 }
 
@@ -2645,7 +2716,7 @@ common parts
 
 @media screen and (max-width: 1005px) {
   .modalSec__navItem {
-    padding-top: 3rem;
+    padding: 3rem 0;
   }
 }
 
@@ -2773,15 +2844,16 @@ common parts
           justify-content: flex-start;
 }
 
-.modalSec__navItem:last-child {
-  margin-top: 5rem;
+@media screen and (min-width: 1005px) {
+  .modalSec__navItem:last-child {
+    margin-top: 5rem;
+  }
 }
 
 @media screen and (max-width: 1005px) {
   .modalSec__navItem {
     min-width: 0;
     width: 100%;
-    border-bottom: 1px solid #888;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
@@ -2789,6 +2861,9 @@ common parts
        -moz-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .modalSec__navItem:not(:last-child) {
+    border-bottom: 1px solid #888;
   }
 }
 
@@ -2822,7 +2897,7 @@ common parts
 
 @media screen and (max-width: 1005px) {
   .modalSec__navItemLinkList {
-    padding-left: 40px;
+    padding-left: 14%;
     width: 85.13%;
   }
 }
@@ -2844,6 +2919,35 @@ common parts
 }
 
 .modalSec__navItemLink {
+  -webkit-transition: all 0.6s ease-in-out 0s;
+  -o-transition: all 0.6s ease-in-out 0s;
+  -moz-transition: all 0.6s ease-in-out 0s;
+  transition: all 0.6s ease-in-out 0s;
+  color: #fff;
+  font-size: 1.6rem;
+  letter-spacing: 0.05em;
+  line-height: 3.1em;
+  font-family: "游ゴシック体";
+  font-weight: 500;
+}
+
+@media screen and (min-width: 769px) {
+  .modalSec__navItemLink:hover {
+    opacity: 0.6;
+  }
+}
+
+.modalSec__navItemLink:hover {
+  color: #fff;
+}
+
+@media screen and (max-width: 1250px) {
+  .modalSec__navItemLink {
+    font-size: 1.4rem;
+  }
+}
+
+.modalSec__navItemOtherService {
   color: #fff;
   font-size: 1.6rem;
   letter-spacing: 0.05em;
@@ -2853,18 +2957,32 @@ common parts
 }
 
 @media screen and (max-width: 1250px) {
-  .modalSec__navItemLink {
+  .modalSec__navItemOtherService {
     font-size: 1.4rem;
   }
 }
 
 .modalSec__navItemInfoLink {
+  -webkit-transition: all 0.6s ease-in-out 0s;
+  -o-transition: all 0.6s ease-in-out 0s;
+  -moz-transition: all 0.6s ease-in-out 0s;
+  transition: all 0.6s ease-in-out 0s;
   color: #fff;
   font-size: 2rem;
   letter-spacing: 0.05em;
   line-height: 1.7em;
   font-family: "游ゴシック体";
   font-weight: bold;
+}
+
+@media screen and (min-width: 769px) {
+  .modalSec__navItemInfoLink:hover {
+    opacity: 0.6;
+  }
+}
+
+.modalSec__navItemInfoLink:hover {
+  color: #fff;
 }
 
 .modalSec__navItemInfoLink:first-child {
@@ -2886,12 +3004,27 @@ common parts
   left: 0;
 }
 
-.modalSec .textEng {
+.modalSec__linkItemDetailsItemLink {
+  margin-left: 1rem;
+  -webkit-transition: all 0.6s ease-in-out 0s;
+  -o-transition: all 0.6s ease-in-out 0s;
+  -moz-transition: all 0.6s ease-in-out 0s;
+  transition: all 0.6s ease-in-out 0s;
   color: #707070;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   letter-spacing: 0.05em;
   line-height: 1.2;
   font-family: "Barlow";
   font-weight: 500;
+}
+
+@media screen and (min-width: 769px) {
+  .modalSec__linkItemDetailsItemLink:hover {
+    opacity: 0.6;
+  }
+}
+
+.modalSec__linkItemDetailsItemLink:hover {
+  color: #707070;
 }
 /*# sourceMappingURL=style.css.map */

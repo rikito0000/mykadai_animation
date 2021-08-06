@@ -15,12 +15,13 @@ fvSec
   z-index: 1;
   background: url('../images/fvSec/fvSec-circle.png') no-repeat;
   background-size: contain;
+  background-position: top left;
 
   @include u-mqMax(768px) {
     background: url('../images/fvSec/circle_sp.png') no-repeat;
-    background-size: 200%;
-    background-position: right top;
+    background-position: top 110% right 30%;
   }
+
 
 
   &__fvTitle {
@@ -109,9 +110,6 @@ philosophySec
   &__textCont {
     width: 43.3%;
     min-width: 470px;
-    @include u-mqMax(1100px) {
-      padding-left: 10%;
-    }
     @include u-mqMax(768px) {
       width: 92%;
       min-width: 0;
@@ -125,7 +123,7 @@ philosophySec
     left: 50%;
     @include u-mqMax (768px) {
       top: 0;
-      left: 15%;
+      left: 4%;
     }
   }
 
@@ -192,10 +190,15 @@ serviceSec
   background-position: -150% -30%;
   position: relative;
   padding-top: 12rem;
+
   &__title {
     position: absolute;
     top: 5%;
     left: 12%;
+    @include u-mqMax(768px) {
+      top: 0;
+      left: 45%;
+    }
   }
   @include u-mqMax(768px) {
     background-image: url("../images/serviceSec/circleBg.png");
@@ -251,17 +254,10 @@ serviceSec
     }
     @include u-mqMax(768px) {
       width: 92%;
+      min-width: 0;
       order: -1;
       position: absolute;
       right: 0;
-    }
-  }
-
-  &__title {
-    @include u-mqMax(768px) {
-      position: absolute;
-      top: 0;
-      right: 4%;
     }
   }
 
@@ -273,7 +269,7 @@ serviceSec
       position: relative;
       width: 92%;
       margin: 0 auto;
-      padding-top: 66.5%;
+      padding-top: 75%;
     }
   }
 
@@ -487,10 +483,15 @@ contactSec
   }
 
   &__textJp {
+    @include u-trs;
+    @include u-hoverOp;
     @include u-articleText($color: black, $fz: 1.6rem, $ff: "游ゴシック体", $fw: 500,  $lh: 5em);
     @include u-mqMax(768px) {
       font-size: 1.4rem;
       line-height: 5.7;
+    }
+    &:hover {
+      color: $black;
     }
   }
   &__arrow {
@@ -529,7 +530,6 @@ common parts
   position: absolute;
   bottom: 0;
   right: 0;
-  // position: relative;
   @include u-trs;
   @include u-hoverOp;
   @include u-articleText($color: black, $fz: 1.4rem, $ff: "Barlow", $fw: 500, $lh: 1.21em);
@@ -548,24 +548,23 @@ common parts
     top: -60%;
     left: 9rem;
     @include u-mqMax(768px) {
-      top: -10%;
-      right: -55%;
+      top: -23%;
     }
   }
   &:after{
     content: '';
     display: inline-block;
-    width: .6rem;
-    height: .6rem;
+    width: 10px;
+    height: 10px;
     border-top: 2px solid $black;
     border-right: 2px solid $black;
     transform: rotate(45deg);
     position: absolute;
     top: 45%;
-    left: 10.5rem;
+    left: 10.3rem;
     @include u-mqMax(768px) {
-      top: 45%;
-      right: -40%;
+      top: 25%;
+      left: 9.7rem;
     }
   }
 }
@@ -594,11 +593,14 @@ common parts
     border: 1px solid #888;
     border-radius: 50%;
     position: absolute;
+    @include u-trs;
+    @include u-hoverOp;
+
     &:before {
       content: '';
       display: block;
-      width: .6rem;
-      height: .6rem;
+      width: 1rem;
+      height: 1rem;
       border-top: 2px solid $black;
       border-right: 2px solid $black;
       transform: rotate(45deg);
@@ -608,11 +610,21 @@ common parts
     }
   }
 
+  .textEng {
+      @include u-articleText($color: #707070, $fz: 1.4rem, $ff: "Barlow", $fw: 500);
+      @include u-mqMax(768px) {
+        margin-left: 1rem;
+      }
+    }
+
   .modalSec {
     display: none;
-    @include u-trs;
+    animation: fadeOut 1s;
+
     &.is-open {
       display: block;
+      animation: fadeIn .3s;
+      opacity: 1;
       width: 100%;
       height: 100%;
       overflow-y: scroll;
@@ -620,19 +632,20 @@ common parts
       position: fixed;
       top: 0;
       left: 0;
-      padding: 21.5rem 0 19rem;
+      padding: 21.5rem 0 0 0;
       z-index: 9999;
-      @include u-mqMax(1100px) {
-        padding-top: 9.5rem;
+      @include u-mqMax(1005px) {
+        padding-top: 6rem;
       }
     }
-      &__navItem {
+
+    &__navItem {
       color: #fff;
       font-size: 3rem;
       @include u-mqMax(1005px) {
-        padding-top: 3rem;
+        padding: 3rem 0;
       }
-      }
+    }
       &__hamburger {
         width: 5em;
         height: 5em;
@@ -663,7 +676,6 @@ common parts
         }
       }
 
-
       &__innerCont {
         @include u-mqMax(1250px) {
           width: 92%;
@@ -681,22 +693,26 @@ common parts
       &__navItem {
         width: 42%;
         min-width: 461px;
-        &:last-child {
-          margin-top: 5rem;
-        }
         @include u-flex;
+        @include u-mqMin(1005px) {
+          &:last-child {
+            margin-top: 5rem;
+          }
+        }
         @include u-mqMax(1005px) {
           min-width: 0;
           width: 100%;
-          border-bottom: 1px solid #888;
           flex-direction: column;
+          &:not(:last-child) {
+            border-bottom: 1px solid #888;
+          }
         }
       }
 
       &__navItemLinkList {
         @include u-flex($fd: column);
         @include u-mqMax(1005px) {
-          padding-left: 40px;
+          padding-left: 14%;
           width: 85.13%;
         }
       }
@@ -710,6 +726,18 @@ common parts
       }
 
       &__navItemLink {
+        @include u-trs;
+        @include u-hoverOp;
+        @include u-articleText($color: $white, $fz: 1.6rem, $ff: "游ゴシック体", $fw: 500, $lh: 3.1em);
+        &:hover {
+          color: $white;
+        }
+        @include u-mqMax(1250px) {
+          font-size: 1.4rem;
+        }
+      }
+
+      &__navItemOtherService {
         @include u-articleText($color: $white, $fz: 1.6rem, $ff: "游ゴシック体", $fw: 500, $lh: 3.1em);
         @include u-mqMax(1250px) {
           font-size: 1.4rem;
@@ -717,6 +745,12 @@ common parts
       }
 
       &__navItemInfoLink {
+        @include u-trs;
+        @include u-hoverOp;
+        @include u-articleText($color: $white, $fz: 2rem, $ff: "游ゴシック体", $fw: bold, $lh: 1.7em);
+        &:hover {
+          color: $white;
+        }
         &:first-child {
           &:after {
             content: '';
@@ -732,10 +766,15 @@ common parts
           }
           margin-right: 6rem;
         }
-        @include u-articleText($color: $white, $fz: 2rem, $ff: "游ゴシック体", $fw: bold, $lh: 1.7em);
       }
 
-      .textEng {
-        @include u-articleText($color: #707070, $fz: 1.4rem, $ff: "Barlow", $fw: 500);
+      &__linkItemDetailsItemLink {
+        margin-left: 1rem;
+        @include u-trs;
+        @include u-hoverOp;
+        @include u-articleText($color: #707070, $fz: 1.2rem, $ff: "Barlow", $fw: 500);
+        &:hover {
+          color:#707070;
+        }
       }
   }

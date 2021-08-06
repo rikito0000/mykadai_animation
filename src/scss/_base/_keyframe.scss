@@ -11,6 +11,15 @@
   }
 }
 
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 // FADE-IN-UP
 @keyframes fadeInUp {
   0% {
