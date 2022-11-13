@@ -1,0 +1,123 @@
+/*====================================================================
+COMMON LAYOUT
+====================================================================*/
+html {
+  font-size: 62.5%;
+}
+body {
+  color: black;
+}
+
+/*-----------------------------------------------
+reset
+------------------------------------------------*/
+*,
+ul,
+li,
+figure,
+button {
+  margin: 0;
+  padding: 0;
+}
+p {
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+  margin: 0;
+}
+
+
+button {
+  border: none;
+  outline: none !important;
+  background: none;
+}
+
+
+.sec01,
+.sec03 {
+  width: 100%;
+  height: 800px;
+  background: black;
+}
+.sec02 {
+  padding: 112px 0;
+}
+.sec02__inner {
+  position: relative;
+  width: 100%;
+  height: 500px;
+}
+.sec02__list {
+  position: absolute;
+  height: 100%;
+  display: flex;
+  gap: 20px;
+}
+.sec02__item {
+  width: 500px;
+  background: rgb(238, 55, 55);
+  font-size: 3rem;
+  text-align: center;
+}
+
+section {
+  position: relative;
+}
+
+h2 {
+  display: block;
+  width: 100%;
+  font-size: 20rem;
+  text-align: center;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+
+
+.splashScreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:#000;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+}
+
+.splashScreen__dotArea {
+  display: inline-flex;
+  align-items: center;
+  justify-content: start;
+  pointer-events: none;
+}
+.splashScreen__dot {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.splashScreen__dot:not(:first-child) {
+    margin-left: 3rem;
+}

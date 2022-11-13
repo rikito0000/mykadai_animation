@@ -1,0 +1,106 @@
+/*====================================================================
+COMMON LAYOUT
+====================================================================*/
+html {
+  font-size: 62.5%;
+}
+body {
+  color: black;
+}
+
+/*-----------------------------------------------
+reset
+------------------------------------------------*/
+*,
+ul,
+li,
+figure,
+button {
+  margin: 0;
+  padding: 0;
+}
+p {
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+  margin: 0;
+}
+
+
+button {
+  border: none;
+  outline: none !important;
+  background: none;
+}
+
+section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  flex-direction: column;
+  padding: 100px 0;
+}
+
+.boxes {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+}
+.box {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: limegreen;
+}
+/*左上*/
+.box1 {
+  top: 0;
+  left: 0;
+}
+/*右下*/
+.box2 {
+  bottom: 0;
+  right: 0;
+}
+
+
+.demo__title {
+  font-size: 10rem;
+  font-weight: bold;
+  color: green;
+}
+
+.demo__figure {
+  width: 300px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.demo__figure img {
+  width: 100%;
+}
+
+.demo__subTitle {
+  display: inline-block;
+  color: green;
+  font-size: 8rem;
+  text-align: center;
+  font-weight: bold;
+}
